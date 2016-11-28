@@ -1,0 +1,5 @@
+git config-sets configurations
+
+git init- initializes a git repository
+
+git clone
