@@ -33,8 +33,6 @@ public class Book{
     }
 
 
-    public void toString(){
-	System.out.print("title:" + title + ", ");
-	System.out.print("author:" + author + ", ");
-	System.out.print("ISBN:" + ISBN);
+    public String toString(){
+	return "title:" + title + ", author:" + author + ", ISBN:" + ISBN;
     }
