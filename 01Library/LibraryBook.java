@@ -3,7 +3,7 @@ abstract class LibraryBook extends Book implements Comparable<LibraryBook>{
 
     public LibraryBook(String author, String title, String ISBN, String callNumber){
 	super(author, title, ISBN);
-	callNumber = callNumber;
+	this.callNumber = callNumber;
     }
 
     public String getCallNumber(){
@@ -11,7 +11,7 @@ abstract class LibraryBook extends Book implements Comparable<LibraryBook>{
     }
 
     public void setCallNumber(String callNumber){
-	callNumber = callNumber;
+	this.callNumber = callNumber;
     }
 
     abstract void checkout(String patron, String due);
@@ -19,4 +19,7 @@ abstract class LibraryBook extends Book implements Comparable<LibraryBook>{
     abstract void returned();
 
     abstract String circulationStatus();
-    
+
+    public String toString(){
+	super.toString() + ", circulation status:" circulationStatus() +", call number:" callNumber;
+    }

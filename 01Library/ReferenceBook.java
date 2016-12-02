@@ -29,7 +29,7 @@ public class ReferenceBook extends LibraryBook{
     }
 
     public String toString(){
-	return super() + ", collection: " + collection;
+	return super.toString() + ", collection: " + collection;
     }
 
 	   
