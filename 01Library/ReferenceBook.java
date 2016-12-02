@@ -3,7 +3,7 @@ public class ReferenceBook extends LibraryBook{
 
     public ReferenceBook(String author, String title, String ISBN, String callNumber, String collection){
 	super(author, title, ISBN, callNumber);
-	this.collection = collection
+	this.collection = collection;
     }
 
     public String getCollection(){
@@ -14,7 +14,7 @@ public class ReferenceBook extends LibraryBook{
 	collection = newCollection;
     }
     
-    public void checkout(){
+    public void checkout(String patron, String due){
 	System.out.println("cannot checkout reference book");
 	throw new UnsupportedOperationException();
     }
@@ -31,5 +31,7 @@ public class ReferenceBook extends LibraryBook{
     public String toString(){
 	return super.toString() + ", collection: " + collection;
     }
+}
+
 
 	   

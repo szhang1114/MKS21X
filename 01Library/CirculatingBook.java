@@ -48,3 +48,6 @@ public class CirculatingBook extends LibraryBook{
 	    return super.toString() + "patron:" + currentHolder + "due:" + dueDate;
 	}
 	else return super.toString() + circulationStatus();
+    }
+
+}
