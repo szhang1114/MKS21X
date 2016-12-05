@@ -24,4 +24,8 @@ public class SuperArrayIterator implements Iterator<String>{
     public void remove(String[] SuperArray){
 	throw new UnsupportedOperationException();
     }
+
+    public Iterator<String> iterator(){
+	return new SuperArrayIterator(SuperArray, element);
+    }
 }
