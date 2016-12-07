@@ -2,30 +2,33 @@ import java.util.Iterator;
 
 public class SuperArrayIterator implements Iterator<String>{
 
-    private String[] SuperArray;
+    private  SuperArray arry;
     private int element;
 
-    public SuperArrayIterator(String[] array, int element){
-	this.array = array;
+    public SuperArrayIterator(SuperArray superarray, int element){
+	arry = superarray;
 	this.element = element;
     }
 
-    public boolean hasNext(String[] SuperArray){
-	return element < SuperArray.length;
+    public boolean hasNext(SuperArray superarray){
+	return element < superarray.length;
     }
 
-    public String next(String[] SuperArray){
+    public String next(){
 	if(hasNext()){
-	    return SuperArray[element + 1];
+	    element ++;
+	    return this.[element];
 	}
-	else throw new NoSuchElementException();
+	else {
+	    throw new NoSuchElementException();
+	}
     }
 
-    public void remove(String[] SuperArray){
+    public void remove(SuperArray superarray){
 	throw new UnsupportedOperationException();
     }
 
     public Iterator<String> iterator(){
-	return new SuperArrayIterator(SuperArray, element);
+	return new SuperArrayIterator(this, 0);
     }
 }
