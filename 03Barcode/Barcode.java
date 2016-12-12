@@ -51,7 +51,7 @@ public class Barcode implements Comparable<Barcode>{
 
     public static String codeToNum(String code){
 	String out = "";
-	for(int index = 0; index < code.length(); index += 5){
+	for(int index = 0; index < 30; index += 5){
 	    String current = code.substring(index, index + 5);
 	    switch(current){
 	    case "||:::": out += "0"; break;
@@ -106,8 +106,8 @@ public class Barcode implements Comparable<Barcode>{
 	Barcode b = new Barcode("85926");
 	//System.out.println(a);
 	System.out.println(b);
-	String code = "||:::|::|::|::|:|:|::::|||::|:";
-	System.out.println(codeToNum(code));
+	String code = "|||:::|::|::|::|:|:|::::|||::|:|";
+	System.out.println(toZip(code));
 	Barcode c = new Barcode("a3df4");
 	}*/
 
