@@ -19,7 +19,21 @@ public class Sorts{
 	    }
 	}
     }
-
+    
+    public static void insertionSort(int[] data){
+	for(int start = 1; start < data.length; start ++){
+	    int stop = 0;
+	    for(int current = start; current > stop; current --){
+		int swap = data[current - 1];
+		if(data[current] < data[current -1]){
+		    data[current - 1] = data[current];
+		    data[current] = swap;
+		    stop = current - 1;
+		}
+	    }
+	}
+    }
+	    
     public static String toString(int[] data){
 	String out = "[";
 	for(int index = 0; index < data.length; index ++){
@@ -30,7 +44,7 @@ public class Sorts{
 
     public static void main(String[] args){
 	int[] ary = {10, 6, 8 , 2, 4, 3, 11, 58, 65, 24, 1};
-        selectionSort(ary);
+        insertionSort(ary);
 	System.out.println(toString(ary));
 	    
     }
