@@ -7,15 +7,16 @@ public class Sorts{
     public static void selectionSort(int[] data){
 	for(int start = 0; start < data.length; start ++){
 	    int swap = start;
-	    for(int current = index + 1; current < data.length; current ++){
+	    int current = start + 1;
+	    for(; current < data.length; current ++){
 		int smallest = data[start];
 		if(data[current] < data[start]){
 		    smallest = data[current];
 		    swap = current;
+		    data[current] = data[start];
+		    data[start] = smallest;
 		}
 	    }
-	    data[current] = data[start];
-	    data[start] = smallest;
 	}
     }
 
@@ -27,6 +28,10 @@ public class Sorts{
 	return out + "]";
     }
 
-    public static void main(Strings[]args){
-	int[] ary = {
+    public static void main(String[] args){
+	int[] ary = {10, 6, 8 , 2, 4, 3, 11, 58, 65, 24, 1};
+        selectionSort(ary);
+	System.out.println(toString(ary));
 	    
+    }
+}
