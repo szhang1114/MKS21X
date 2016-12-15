@@ -22,22 +22,27 @@ public class Sorts{
     
     public static void insertionSort(int[] data){
 	for(int start = 1; start < data.length; start ++){
-	    int stop = 0;
-	    for(int current = start; current > stop; current --){
+	    for(int current = start; current > 0 && data[current] < data[current - 1]; current --){
 		int swap = data[current - 1];
 		if(data[current] < data[current -1]){
 		    data[current - 1] = data[current];
 		    data[current] = swap;
-		    stop = current - 1;
 		}
 	    }
 	}
     }
-	    
+    
+    public static void bubbleSort(int[] data){
+	for(int index = 0 ;index < data.length; index ++){
+	    for(
+
     public static String toString(int[] data){
 	String out = "[";
 	for(int index = 0; index < data.length; index ++){
-	    out += data[index] + ", ";
+	    if(index == data.length - 1){
+		out+= data[index];
+	    }
+	    else out += data[index] + ", ";
 	}
 	return out + "]";
     }
