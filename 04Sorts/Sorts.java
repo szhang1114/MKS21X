@@ -33,8 +33,22 @@ public class Sorts{
     }
     
     public static void bubbleSort(int[] data){
-	for(int index = 0 ;index < data.length; index ++){
-	    for(
+	for(int repeat = 0; repeat < data.length; repeat ++){
+	    int swaps = 0;
+	    for(int current = 0; current < data.length - 1; current ++){
+		if(current == data.length - 1 && swaps == 0){
+		    return ;
+		}
+		else if(data[current] > data[current + 1]){
+		    int swap = data[current + 1];
+		    data[current + 1] = data[current];
+		    data[current] = swap;
+		    swaps ++;
+		}
+	    }
+	}
+    }
+		
 
     public static String toString(int[] data){
 	String out = "[";
@@ -48,9 +62,23 @@ public class Sorts{
     }
 
     public static void main(String[] args){
-	int[] ary = {10, 6, 8 , 2, 4, 3, 11, 58, 65, 24, 1};
+	int[] ary2 = new int[25];
+	for(int i = 0; i < 25; i ++){
+	    ary2[i] = (int)(Math.random() * 10);
+	}
+	int[] ary3 = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
+	System.out.println(toString(ary2));
+	selectionSort(ary2);
+	System.out.println(toString(ary2));
+	int[] ary = new int[10000];
+	for(int i = 0; i < 10000; i ++){
+	    //ary[i] = (int)(Math.random() * 1000000);
+	    ary[i] = i;
+	}
+	long startTime = System.currentTimeMillis();
         insertionSort(ary);
-	System.out.println(toString(ary));
+	long endTime = System.currentTimeMillis();
+	System.out.println((endTime - startTime) / 1000.0);
 	    
     }
 }
