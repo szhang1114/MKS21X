@@ -1,8 +1,8 @@
 public class temp{
 
     public static void main(String[] args) {
-	System.out.println(CtoF(100.0));
-	System.out.println(FtoC(212.0));
+	System.out.println(CtoF(0));
+	System.out.println(FtoC(32));
     }
 
     public static double CtoF(double cels) {
