@@ -48,6 +48,11 @@ public class Sorts{
 	    }
 	}
     }
+
+    //public static void bubbleSort2(int[] data){
+    //	for(int start = data.length - 1; start > 0; start --){
+    //	    for(int current = 0; current < start; current ++){
+		
 		
 
     public static String toString(int[] data){
@@ -66,17 +71,17 @@ public class Sorts{
 	for(int i = 0; i < 25; i ++){
 	    ary2[i] = (int)(Math.random() * 10);
 	}
-	int[] ary3 = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
-	System.out.println(toString(ary2));
-	selectionSort(ary2);
-	System.out.println(toString(ary2));
+	//int[] ary3 = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
+	//System.out.println(toString(ary2));
+	//selectionSort(ary2);
+	//System.out.println(toString(ary2));
 	int[] ary = new int[10000];
 	for(int i = 0; i < 10000; i ++){
 	    //ary[i] = (int)(Math.random() * 1000000);
 	    ary[i] = i;
 	}
 	long startTime = System.currentTimeMillis();
-        insertionSort(ary);
+        selectionSort(ary);
 	long endTime = System.currentTimeMillis();
 	System.out.println((endTime - startTime) / 1000.0);
 	    
